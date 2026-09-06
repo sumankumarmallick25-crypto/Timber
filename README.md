@@ -1,45 +1,33 @@
 # TIMBER
 
-Modern men's fashion ecommerce for the Indian market.
+Modern men's fashion ecommerce for India.
 
-## Status
-Phase 0 — project foundation. Documentation and repository scaffolding are being established. The production storefront, database, authentication, payments, shipping, and admin systems are **not implemented yet**.
+## Phase 1 — Storefront foundation
 
-## Product vision
-TIMBER aims to provide a premium, modern, masculine, and accessible shopping experience for Indian men, beginning with T-shirts, shirts, trousers, jeans, cargos, and co-ords.
+The repository now contains the first real Next.js storefront layer: a responsive editorial homepage, shop collection route, metadata, design tokens, loading state, 404 state, typed sample product data, and ESLint/TypeScript/Tailwind configuration.
 
-## Technology direction
-- Next.js + React + TypeScript
-- Tailwind CSS
-- PostgreSQL + Prisma
-- Secure authentication (provider to be selected during implementation)
-- Razorpay for Indian payments
-- Shipping provider such as Shiprocket, to be finalized
-- Vercel-compatible deployment direction
+### Current status
 
-## Documentation
-- [Product Requirements](docs/PRD.md)
-- [Architecture](docs/ARCHITECTURE.md)
-- [Roadmap](docs/ROADMAP.md)
-- [Security](docs/SECURITY.md)
-- [Contributing](docs/CONTRIBUTING.md)
+- **Implemented:** storefront UI foundation and original TIMBER visual direction.
+- **Not implemented yet:** database, Prisma schema, authentication, real product persistence, cart state, checkout, Razorpay, shipping, admin, reviews, coupons, and production observability.
+- **Important:** GitHub edits have been made directly, but this connector cannot run `npm install`, `npm run lint`, or `npm run build` inside the repository. A lockfile has therefore not been generated here. Before deployment, install dependencies locally/CI and commit the generated lockfile.
 
-## Planned structure
-```text
-app/ components/ data/ lib/ prisma/ public/ types/ tests/ docs/ .github/ .env.example
-```
+## Stack
 
-## Environment
-Copy `.env.example` to `.env.local` during implementation and provide values locally. Never commit secrets.
+- Next.js App Router
+- React + TypeScript
+- Tailwind CSS v4
+- PostgreSQL + Prisma (planned for Phase 2)
+- Razorpay (planned for checkout)
 
 ## Development
-Implementation commands will be added when the application scaffold is introduced. Do not add unnecessary dependencies during Phase 0.
 
-## Branding
-TRIPR is used only as inspiration for ecommerce UX quality. TIMBER must use original branding, copy, visuals, code, and product content.
+```bash
+npm install
+npm run dev
+npm run lint
+npm run typecheck
+npm run build
+```
 
-## Security warning
-Never commit `.env`, `.env.local`, API keys, database credentials, payment secrets, webhook secrets, or private tokens.
-
-## License
-To be decided before public production release.
+See `docs/PRD.md`, `docs/ARCHITECTURE.md`, and `docs/ROADMAP.md` for the durable product plan.
