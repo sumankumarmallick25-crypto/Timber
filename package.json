@@ -1,0 +1,16 @@
+{
+  "name": "timber-store",
+  "version": "0.1.0",
+  "private": true,
+  "description": "TIMBER — modern men's fashion ecommerce for India",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
